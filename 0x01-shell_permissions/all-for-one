@@ -1,0 +1,19 @@
+#!/bin/bash
+su betty>0x01-shell_permissions/0-iam_betty
+id -un>0x01-shell_permissions/1-who_am_i
+groups>0x01-shell_permissions/2-groups
+chown betty hello>0x01-shell_permissions/3-new_owner
+touch hello>0x01-shell_permissions/4-empty
+chmod u+x hello>0x01-shell_permissions/5-execute
+chmod u+x,g+x,o+r hello>0x01-shell_permissions/6-multiple_permissions
+chmod ugo+x hello>0x01-shell_permissions/7-everybody
+chmod 007 hello>0x01-shell_permissions/8-James_Bond
+chmod 007 hello>0x01-shell_permissions/9-John_Doe
+chmod --reference=olleh hello>0x01-shell_permissions/10-mirror_permissions
+chmod _R ugo+X ./>0x01-shell_permissions/11-directories_permissions
+mkdir -m 751 my_dir>0x01-shell_permissions/12-directory_permissions
+chgrp school hello>0x01-shell_permissions/13-change_group
+chown vincent:staff *>0x01-shell_permissions/100-change_owner_and_group
+chown -h vincent:staff  _hello>0x01-shell_permissions/101-symbolic_link_permissions
+chown --from=guillaume betty hello>0x01-shell_permissions/102-if_only
+telnet towel.blinkenlights.nl>0x01-shell_permissions/103-Star_Wars
